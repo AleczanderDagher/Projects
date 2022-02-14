@@ -1,0 +1,4 @@
+C:\Users\15868\Documents\Heap\Debug\Heap.exe
+C:\Users\15868\Documents\Heap\Debug\Heap.pdb
+C:\Users\15868\Documents\CSC 2201\Heap\Debug\Heap.exe
+C:\Users\15868\Documents\CSC 2201\Heap\Debug\Heap.pdb
