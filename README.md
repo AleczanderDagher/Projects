@@ -1,2 +1,2 @@
 # Projects
-Projects that I have done for school.
+These are projects that I have done for school.
