@@ -1,0 +1,229 @@
+\hypertarget{_b_s_tree_8h_source}{}\section{B\+S\+Tree.\+h}
+
+\begin{DoxyCode}
+00001 \textcolor{comment}{//--------------------------------------------------------------------}
+00002 \textcolor{comment}{//}
+00003 \textcolor{comment}{//  Laboratory 9                                    BSTree.h}
+00004 \textcolor{comment}{//}
+00005 \textcolor{comment}{//  Class declarations for the linked implementation of the Binary}
+00006 \textcolor{comment}{//  Search Tree ADT -- including the recursive helpers of the}
+00007 \textcolor{comment}{//  public member functions}
+00008 \textcolor{comment}{//}
+00009 \textcolor{comment}{//--------------------------------------------------------------------}
+00010 
+00011 \textcolor{preprocessor}{#ifndef BSTREE\_H}
+00012 \textcolor{preprocessor}{#define BSTREE\_H}
+00013 
+00014 \textcolor{preprocessor}{#include <stdexcept>}
+00015 \textcolor{preprocessor}{#include <iostream>}
+00016 
+00017 \textcolor{keyword}{using namespace }\hyperlink{namespacestd}{std};
+00018 
+00019 \textcolor{keyword}{template} < \textcolor{keyword}{typename} DataType, \textcolor{keyword}{class} KeyType >    \textcolor{comment}{// DataType : tree data item}
+\hypertarget{_b_s_tree_8h_source_l00020}{}\hyperlink{class_b_s_tree}{00020} \textcolor{keyword}{class }\hyperlink{class_b_s_tree}{BSTree}                                     \textcolor{comment}{// KeyType : key field}
+00021 \{
+00022 \textcolor{keyword}{public}:
+00023 
+00024     \textcolor{comment}{// "Constructors."}
+00025    \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00026     \textcolor{comment}{// "Default constructor."\(\backslash\)n}
+00027     \textcolor{comment}{//Precondition: BSTree must be empty.\(\backslash\)n}
+00028     \textcolor{comment}{//Postcondition: Sets the BSTree.\(\backslash\)n}
+00029     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00030     \textcolor{comment}{//Outputs: root is equal to NULL.}
+00031     \hyperlink{class_b_s_tree}{BSTree}();
+00032     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00033     \textcolor{comment}{// "Copy constructor."\(\backslash\)n}
+00034     \textcolor{comment}{//Precondition: BSTree must exist.}
+00035     \textcolor{comment}{//Postcondition: This will create an empty tree.\(\backslash\)n}
+00036     \textcolor{comment}{//Inputs: BSTree object referenced to source.}
+00037     \textcolor{comment}{//Outputs: Makes the tree empty.}
+00038     \hyperlink{class_b_s_tree}{BSTree}(\textcolor{keyword}{const} \hyperlink{class_b_s_tree}{BSTree<DataType, KeyType>}& other);   
+00039     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00040     \textcolor{comment}{// "Overloaded assignment operator."}
+00041     \textcolor{comment}{//Precondition: The source tree is a valid tree.\(\backslash\)n}
+00042     \textcolor{comment}{//Postcondition: This will create a deep copy of the sourceTree BSTree.\(\backslash\)n}
+00043     \textcolor{comment}{//Inputs: The sourceTree.}
+00044     \textcolor{comment}{//Outputs: This will return the reference to the sourceTree.}
+00045     \hyperlink{class_b_s_tree}{BSTree}& operator= (\textcolor{keyword}{const} \hyperlink{class_b_s_tree}{BSTree<DataType, KeyType>}& other);
+00046     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00047     \textcolor{comment}{// "Destructor."\(\backslash\)n}
+00048     \textcolor{comment}{//Precondition: When a BSTree object exists.\(\backslash\)n}
+00049     \textcolor{comment}{//Postcondition: This will free the memory that is used by the tree.\(\backslash\)n}
+00050     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00051     \textcolor{comment}{//Outputs: None}
+00052     ~\hyperlink{class_b_s_tree}{BSTree}();
+00053     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00054     \textcolor{comment}{// "Binary search tree manipulation operations."}
+00055     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00056     \textcolor{comment}{// "Insert data item."\(\backslash\)n}
+00057     \textcolor{comment}{//Precondition: BSTree object must exist.\(\backslash\)n}
+00058     \textcolor{comment}{//Postcondition: This function inserts a new node into the tree.\(\backslash\)n}
+00059     \textcolor{comment}{//Inputs: newDataItem, which represents any DataType object.\(\backslash\)n}
+00060     \textcolor{comment}{//Outputs: None.}
+00061     \textcolor{keywordtype}{void} insert(\textcolor{keyword}{const} DataType& new\_data\_item);
+00062     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00063     \textcolor{comment}{// "Retrieve data item."\(\backslash\)n}
+00064     \textcolor{comment}{//Precondition: BSTree object must exist.\(\backslash\)n}
+00065     \textcolor{comment}{//Postcondition: The function will return true if the data item is found & if it doesn't, it returns
+       false.}
+00066     \textcolor{comment}{//Inputs: searchKey, which represents a reference to a KeyType object & searchDataItem, which
+       represents}
+00067     \textcolor{comment}{//a reference to a DataType object.\(\backslash\)n}
+00068     \textcolor{comment}{//Outputs: Returns true if data item is found, returns false if otherwise.}
+00069     \textcolor{keywordtype}{bool} retrieve(\textcolor{keyword}{const} KeyType& search\_key, DataType& search\_data\_item) \textcolor{keyword}{const};
+00070     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00071     \textcolor{comment}{// "Remove data item."\(\backslash\)n}
+00072     \textcolor{comment}{//Precondition: When a BSTree object exists.\(\backslash\)n}
+00073     \textcolor{comment}{//Postcondition: This will delete the node and update the BSTree object.\(\backslash\)n}
+00074     \textcolor{comment}{//Inputs: deleteKey, which is a reference to object of type KeyType.\(\backslash\)n}
+00075     \textcolor{comment}{//Outputs: Returns true if data item is found and deleted, and returns false if it doesn't find it.}
+00076     \textcolor{keywordtype}{bool} \textcolor{keyword}{remove}(\textcolor{keyword}{const} KeyType& delete\_key);
+00077     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00078     \textcolor{comment}{// "Output keys in ascending order."}
+00079     \textcolor{comment}{//Precondition: BSTree object has to exist.\(\backslash\)n}
+00080     \textcolor{comment}{//Postcondition: This function prints out the keys in the tree in ascending order.}
+00081     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00082     \textcolor{comment}{//Outputs: Prints out the keys in a tree in ascending order.}
+00083     \textcolor{keywordtype}{void} writeKeys() \textcolor{keyword}{const};   
+00084     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00085     \textcolor{comment}{// "Clear tree."\(\backslash\)n}
+00086     \textcolor{comment}{//Precondition: When a BSTree exists.\(\backslash\)n}
+00087     \textcolor{comment}{//Postcondition: This will remove all the nodes from the tree.\(\backslash\)n}
+00088     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00089     \textcolor{comment}{//Outputs: None.}
+00090     \textcolor{keywordtype}{void} clear();                                
+00091     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00092     \textcolor{comment}{// Binary search tree status operations}
+00093     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00094     \textcolor{comment}{// "Tree is empty."\(\backslash\)n}
+00095     \textcolor{comment}{//Precondition: If BSTree exists.\(\backslash\)n}
+00096     \textcolor{comment}{//Postcondition: This function returns true if a tree is empty. Returns false if otherwise.\(\backslash\)n}
+00097     \textcolor{comment}{//Inputs: None}
+00098     \textcolor{comment}{//Outputs: Returns root to 0.}
+00099     \textcolor{keywordtype}{bool} isEmpty() \textcolor{keyword}{const};                        
+00100     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00101     \textcolor{comment}{// "Output the tree structure -- used in testing/debugging."}
+00102     \textcolor{comment}{//Precondition: BSTree must exist.}
+00103     \textcolor{comment}{//Postcondition: This function prints out the keys in the binary search tree.}
+00104     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00105     \textcolor{comment}{//Outputs: This outputs the keys in the BSTree.}
+00106     \textcolor{keywordtype}{void} showStructure() \textcolor{keyword}{const};
+00107     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00108     \textcolor{comment}{// "In-lab operations."}
+00109     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00110     \textcolor{comment}{// "Height of tree."}
+00111     \textcolor{comment}{//Precondition: BSTree has to exist.\(\backslash\)n}
+00112     \textcolor{comment}{//Postcondition: This function returns the height of the BSTree.\(\backslash\)n}
+00113     \textcolor{comment}{//Inputs: None.\(\backslash\)n}
+00114     \textcolor{comment}{//Outputs: Returns the height of the BSTree as an integer.}
+00115     \textcolor{keywordtype}{int} getHeight() \textcolor{keyword}{const};
+00116     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00117     \textcolor{comment}{// "Number of nodes in tree."}
+00118     \textcolor{comment}{//Precondition: BSTree has to exist.\(\backslash\)n}
+00119     \textcolor{comment}{//Postcondition: This function will return the count of the subtree.\(\backslash\)n}
+00120     \textcolor{comment}{//Inputs: None.}
+00121     \textcolor{comment}{//Outputs: Prints out the # of nodes in the tree.}
+00122     \textcolor{keywordtype}{int} getCount() \textcolor{keyword}{const};             
+00123     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00124 \textcolor{keyword}{protected}:
+00125 
+\hypertarget{_b_s_tree_8h_source_l00126}{}\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{00126}     \textcolor{keyword}{class }\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}                  \textcolor{comment}{// "Inner class: facilitator for the BSTree class"}
+00127     \{
+00128     \textcolor{keyword}{public}:
+00129 
+00130         \textcolor{comment}{// "Constructor."\(\backslash\)n}
+00131         \textcolor{comment}{//Precondition: When there is no BSTree nodes. }
+00132         \textcolor{comment}{//Postcondition: This will create a binary search tree node that contains nodeDataItem, left}
+00133         \textcolor{comment}{//leftPtr, and rightPtr.\(\backslash\)n}
+00134         \textcolor{comment}{//Inputs: nodeDataItem (DataType object), leftPtr (BSTree object passed as pointer), and rightPtr}
+00135         \textcolor{comment}{//(BSTree object passed as pointer).\(\backslash\)n}
+00136         \textcolor{comment}{//Outputs: Assigns dataItem to nodeDataItem, left to leftPtr, and right to rightPtr.}
+00137         \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}(\textcolor{keyword}{const} DataType& node\_data\_item, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* left\_pointer, 
+      \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* right\_pointer);
+00138        
+00139         \textcolor{comment}{// Data members}
+\hypertarget{_b_s_tree_8h_source_l00140}{}\hyperlink{class_b_s_tree_1_1_b_s_tree_node_a507c8d6dde1b8d35d9af6b4e78f38962}{00140}         DataType \hyperlink{class_b_s_tree_1_1_b_s_tree_node_a507c8d6dde1b8d35d9af6b4e78f38962}{dataItem};         \textcolor{comment}{// "Binary search tree data item"}
+\hypertarget{_b_s_tree_8h_source_l00141}{}\hyperlink{class_b_s_tree_1_1_b_s_tree_node_a8d7bfd0208a562c8b8ab332e1d796563}{00141}         \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* left,    \textcolor{comment}{// "Pointer to the left child"}
+00142             * \hyperlink{class_b_s_tree_1_1_b_s_tree_node_a8d7bfd0208a562c8b8ab332e1d796563}{right};   \textcolor{comment}{// "Pointer to the right child"}
+00143 
+00144     \};
+00145 
+00146     
+00147     \textcolor{comment}{// "Recursive helpers for the public member functions."}
+00148     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00149     \textcolor{comment}{//Precondition: When a BSTree object exists.\(\backslash\)n}
+00150     \textcolor{comment}{//Postcondition: This will delete the node and update the BSTree object.\(\backslash\)n}
+00151     \textcolor{comment}{//Inputs: deleteKey, which is a reference to object of type KeyType. And p, }
+00152     \textcolor{comment}{//which represents a BSTreeNode object passed as a reference.\(\backslash\)n}
+00153     \textcolor{comment}{//Outputs: Returns true if data item is found and deleted, and returns false if it doesn't find it.}
+00154     \textcolor{keywordtype}{bool} remove\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}*& n, \textcolor{keyword}{const} KeyType& delete\_key);
+00155     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00156     \textcolor{comment}{//Precondition: When a BSTree exists.\(\backslash\)n}
+00157     \textcolor{comment}{//Postcondition: This will clear the subtree pointed to by p.\(\backslash\)n}
+00158     \textcolor{comment}{//Inputs: "p" (represents a pointer of a BSTree object type).\(\backslash\)n}
+00159     \textcolor{comment}{//Outputs: Deletes the subtree pointed to by p.}
+00160     \textcolor{keywordtype}{void} clear\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n);
+00161     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00162     \textcolor{comment}{//Precondition: BSTree object must exist.\(\backslash\)n}
+00163     \textcolor{comment}{//Postcondition: The function will return true if the data item is found & if it doesn't, it returns
+       false.}
+00164     \textcolor{comment}{//Inputs: searchKey, which represents a reference to a KeyType object & searchDataItem, which
+       represents}
+00165     \textcolor{comment}{//a reference to a DataType object.\(\backslash\)n}
+00166     \textcolor{comment}{//Outputs: Returns true if data item is found, returns false if otherwise.}
+00167     \textcolor{keywordtype}{bool} retrieve\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n, \textcolor{keyword}{const} KeyType& search\_key, DataType& search\_data\_item) \textcolor{keyword}{
+      const};
+00168     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00169     \textcolor{comment}{//Precondition: BSTree has to exist.\(\backslash\)n}
+00170     \textcolor{comment}{//Postcondition: This function returns the height of the BSTree that is pointed to by p.\(\backslash\)n}
+00171     \textcolor{comment}{//Inputs: "p", which represents a pointer of a BSTree object type.\(\backslash\)n}
+00172     \textcolor{comment}{//Outputs: Prints out the height of the subtree pointed to by p.}
+00173     \textcolor{keywordtype}{int}  get\_height\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n) \textcolor{keyword}{const};
+00174     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00175     \textcolor{comment}{//Precondition: BSTree has to exist.\(\backslash\)n}
+00176     \textcolor{comment}{//Postcondition: This function will return the count of the subtree that is pointed to by p.\(\backslash\)n}
+00177     \textcolor{comment}{//Inputs: "p", which represents a pointer of a BSTree object type.\(\backslash\)n}
+00178     \textcolor{comment}{//Outputs: Returns an integer that is incremented by 1. }
+00179     \textcolor{keywordtype}{int}  get\_count\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n) \textcolor{keyword}{const};
+00180     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00181     \textcolor{comment}{//Precondition: BSTree must exist.\(\backslash\)n}
+00182     \textcolor{comment}{//Postcondition: This function will set a tree equal to the sourceTree.\(\backslash\)n}
+00183     \textcolor{comment}{//Inputs: sourceTree, which is a BSTree object.\(\backslash\)n}
+00184     \textcolor{comment}{//Outputs: None.}
+00185     \textcolor{keywordtype}{void} copy\_tree(\textcolor{keyword}{const} \hyperlink{class_b_s_tree}{BSTree<DataType, KeyType>}& other\_tree);
+00186     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00187     \textcolor{comment}{//Precondition: BSTree must exist.\(\backslash\)n}
+00188     \textcolor{comment}{//Postcondition: This function prints out the keys in the binary search tree.\(\backslash\)n}
+00189     \textcolor{comment}{//Inputs: "p" (represents a pointer of a BSTree object type) & level (integer).\(\backslash\)n}
+00190     \textcolor{comment}{//Outputs: Prints out the subtree.}
+00191     \textcolor{keywordtype}{void} show\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n, \textcolor{keywordtype}{int} level) \textcolor{keyword}{const};
+00192     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00193     \textcolor{comment}{//Precondition: BSTree & DataType object must exist.\(\backslash\)n}
+00194     \textcolor{comment}{//Postcondition: This function inserts newDataItem in the subtree pointed to by p.\(\backslash\)n}
+00195     \textcolor{comment}{//Inputs: p, which represents a BSTreeNode object passed as a reference & }
+00196     \textcolor{comment}{//newDataItem, which represents a DataType object that is passed by a reference.\(\backslash\)n}
+00197     \textcolor{comment}{//Outputs: None.}
+00198     \textcolor{keywordtype}{void} insert\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}*& n, \textcolor{keyword}{const} DataType& new\_data\_item);
+00199     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00200     \textcolor{comment}{//Precondition: 2 BSTreeNode objects must exist.\(\backslash\)n}
+00201     \textcolor{comment}{//Postcondition: This function makes a tree equal to another tree.\(\backslash\)n}
+00202     \textcolor{comment}{//Inputs: p and sourcePtr, which represent 2 BSTreeNode objects.\(\backslash\)n}
+00203     \textcolor{comment}{//Outputs: None.}
+00204     \textcolor{keywordtype}{void} copy\_tree\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}*& n, \textcolor{keyword}{const} \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* other\_pointer);
+00205     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00206     \textcolor{comment}{//Precondition: BSTree object must exist.\(\backslash\)n}
+00207     \textcolor{comment}{//Postcondition: This function outputs the keys in the subtree pointed to by BSTreeNode* p.\(\backslash\)n}
+00208     \textcolor{comment}{//Inputs: p, which represents a pointer of a BSTree object.\(\backslash\)n}
+00209     \textcolor{comment}{//Outputs: None.}
+00210     \textcolor{keywordtype}{void} write\_keys\_helper(\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* n) \textcolor{keyword}{const};
+00211     \textcolor{comment}{//-------------------------------------------------------------------------------------------}
+00212     \textcolor{comment}{// "Data member."}
+00213     \textcolor{comment}{// "Pointer to the root node."}
+\hypertarget{_b_s_tree_8h_source_l00214}{}\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{00214}     \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{BSTreeNode}* \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root};   
+00215 \};
+00216 
+00217 \textcolor{preprocessor}{#endif  // define BSTREE\_H}
+00218 
+00219 
+\end{DoxyCode}

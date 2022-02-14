@@ -1,0 +1,126 @@
+\hypertarget{database_8cpp}{}\section{database.\+cpp File Reference}
+\label{database_8cpp}\index{database.\+cpp@{database.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}B\+S\+Tree.\+cpp\char`\"{}}\newline
+Include dependency graph for database.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{database_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_account_record}{Account\+Record}
+\item 
+struct \hyperlink{struct_index_entry}{Index\+Entry}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{database_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{database_8cpp_a5d9687231dabb10b55cd7598e1be6702}{name\+Length} = 11
+\item 
+const long \hyperlink{database_8cpp_a79deb9c018e75d0dbd8d7e19d0415e89}{bytes\+Per\+Record} = 38
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{database_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{}\label{database_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{database.\+cpp@{database.\+cpp}!main@{main}}
+\index{main@{main}!database.\+cpp@{database.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00053 \{    
+00054     ifstream acctFile (\textcolor{stringliteral}{"accounts.txt"});   \textcolor{comment}{// "Accounts database file."   }
+00055     \hyperlink{struct_account_record}{AccountRecord} acctRec\{\};                \textcolor{comment}{// "Account record."    }
+00056     \hyperlink{class_b_s_tree}{BSTree<IndexEntry,int>} index;         \textcolor{comment}{// "Database index."    }
+00057     \hyperlink{struct_index_entry}{IndexEntry} entry;                     \textcolor{comment}{// "Index entry."    }
+00058     \textcolor{keywordtype}{int} searchID;                         \textcolor{comment}{// "User input account ID."}
+00059     \textcolor{keywordtype}{long} record\_num\{\};                          \textcolor{comment}{// "Record number."  }
+00060 
+00061     \textcolor{comment}{// "Iterates through the database records. This will read the    }
+00062     \textcolor{comment}{// account ID and add the (account ID, record number) pair to the    }
+00063     \textcolor{comment}{// index."    }
+00064     \textcolor{keywordtype}{string} s;
+00065     acctFile >> entry.\hyperlink{struct_index_entry_aa5008695f70f365c7959d42ccca0fa13}{acctID};
+00066     \textcolor{keywordflow}{while} (acctFile.good())
+00067     \{
+00068         acctFile >> s >> s >> s;
+00069         entry.\hyperlink{struct_index_entry_a3f71077b699f2d718ca60df893c4c470}{recNum} = record\_num;
+00070         record\_num++;
+00071         index.\hyperlink{class_b_s_tree_a3136c063de9adf6f55e524ad099df62f}{insert}(entry);
+00072         acctFile >> entry.\hyperlink{struct_index_entry_aa5008695f70f365c7959d42ccca0fa13}{acctID};
+00073     \}
+00074     \textcolor{comment}{// "Outputs the account IDs in ascending order."   }
+00075     cout << \textcolor{stringliteral}{"\(\backslash\)nAccount IDs in ascending order : "} << endl;
+00076     index.\hyperlink{class_b_s_tree_a0f0b3362a2b927092a464cb37edf59b3}{writeKeys}();
+00077     \textcolor{comment}{// "Clears the status flags for the database file."    }
+00078     acctFile.clear();
+00079     acctFile.close();
+00080     \textcolor{comment}{// "Reads an account ID from the keyboard and outputs the    }
+00081     \textcolor{comment}{// corresponding record."}
+00082     acctFile.open(\textcolor{stringliteral}{"accounts.txt"});
+00083     cout << endl << \textcolor{stringliteral}{"Enter account ID : "};
+00084     \textcolor{keywordflow}{while} (cin >> searchID)
+00085     \{
+00086         \textcolor{keywordflow}{if} (index.\hyperlink{class_b_s_tree_a464aa205470b150038ff35dfa01d89b8}{retrieve}(searchID, entry))
+00087         \{
+00088             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i <= entry.\hyperlink{struct_index_entry_a3f71077b699f2d718ca60df893c4c470}{recNum}; i++)
+00089             \{
+00090                 acctFile >> acctRec.acctID;
+00091                 acctFile >> acctRec.firstName >> acctRec.lastName;
+00092                 acctFile >> acctRec.balance;
+00093             \}
+00094 
+00095             cout << \textcolor{stringliteral}{"Record # : "} << entry.\hyperlink{struct_index_entry_a3f71077b699f2d718ca60df893c4c470}{recNum} << endl;
+00096             cout << \textcolor{stringliteral}{"Account ID : "} << acctRec.acctID << endl;
+00097             cout << \textcolor{stringliteral}{"First name : "} << acctRec.firstName << endl;
+00098             cout << \textcolor{stringliteral}{"Last name : "} << acctRec.lastName << endl;
+00099             cout << \textcolor{stringliteral}{"Balance : "} << acctRec.balance << endl;
+00100         \}
+00101         \textcolor{keywordflow}{else}
+00102         \{
+00103             cout << \textcolor{stringliteral}{"There is no record with that account ID. Try another one."};
+00104 
+00105         \}
+00106         acctFile.clear();
+00107         acctFile.close();
+00108         acctFile.open(\textcolor{stringliteral}{"accounts.txt"});
+00109         cout << endl << \textcolor{stringliteral}{"Enter account ID : "};
+00110     \}
+00111 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{database_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\hypertarget{database_8cpp_a79deb9c018e75d0dbd8d7e19d0415e89}{}\label{database_8cpp_a79deb9c018e75d0dbd8d7e19d0415e89} 
+\index{database.\+cpp@{database.\+cpp}!bytes\+Per\+Record@{bytes\+Per\+Record}}
+\index{bytes\+Per\+Record@{bytes\+Per\+Record}!database.\+cpp@{database.\+cpp}}
+\subsubsection{\texorpdfstring{bytes\+Per\+Record}{bytesPerRecord}}
+{\footnotesize\ttfamily const long bytes\+Per\+Record = 38}
+
+\hypertarget{database_8cpp_a5d9687231dabb10b55cd7598e1be6702}{}\label{database_8cpp_a5d9687231dabb10b55cd7598e1be6702} 
+\index{database.\+cpp@{database.\+cpp}!name\+Length@{name\+Length}}
+\index{name\+Length@{name\+Length}!database.\+cpp@{database.\+cpp}}
+\subsubsection{\texorpdfstring{name\+Length}{nameLength}}
+{\footnotesize\ttfamily const int name\+Length = 11}
+

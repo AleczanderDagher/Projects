@@ -1,0 +1,554 @@
+\hypertarget{class_b_s_tree}{}\section{B\+S\+Tree$<$ Data\+Type, Key\+Type $>$ Class Template Reference}
+\label{class_b_s_tree}\index{B\+S\+Tree$<$ Data\+Type, Key\+Type $>$@{B\+S\+Tree$<$ Data\+Type, Key\+Type $>$}}
+
+
+{\ttfamily \#include $<$B\+S\+Tree.\+h$>$}
+
+
+
+Collaboration diagram for B\+S\+Tree$<$ Data\+Type, Key\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{class_b_s_tree__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e}{B\+S\+Tree} ()
+\item 
+\hyperlink{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0}{B\+S\+Tree} (const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&other)
+\item 
+\hyperlink{class_b_s_tree}{B\+S\+Tree} \& \hyperlink{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448}{operator=} (const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&other)
+\item 
+\hyperlink{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c}{$\sim$\+B\+S\+Tree} ()
+\item 
+void \hyperlink{class_b_s_tree_a3136c063de9adf6f55e524ad099df62f}{insert} (const Data\+Type \&new\+\_\+data\+\_\+item)
+\item 
+bool \hyperlink{class_b_s_tree_a464aa205470b150038ff35dfa01d89b8}{retrieve} (const Key\+Type \&search\+\_\+key, Data\+Type \&search\+\_\+data\+\_\+item) const
+\item 
+bool \hyperlink{class_b_s_tree_a7750c081fd047304b6ded5f2df65b3f3}{remove} (const Key\+Type \&delete\+\_\+key)
+\item 
+void \hyperlink{class_b_s_tree_a0f0b3362a2b927092a464cb37edf59b3}{write\+Keys} () const
+\item 
+void \hyperlink{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{clear} ()
+\item 
+bool \hyperlink{class_b_s_tree_aa79c2c24f8a4068dd01526674016b861}{is\+Empty} () const
+\item 
+void \hyperlink{class_b_s_tree_a66690333188606d533e4ad182922d9e1}{show\+Structure} () const
+\item 
+int \hyperlink{class_b_s_tree_a9e8f8c02f31a9ed55458b569dd809d62}{get\+Height} () const
+\item 
+int \hyperlink{class_b_s_tree_a138977042d1d7cbaa363fbcf435a1e88}{get\+Count} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{remove\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&n, const Key\+Type \&delete\+\_\+key)
+\item 
+void \hyperlink{class_b_s_tree_a0c759512b61b88b824266d501beaf842}{clear\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n)
+\item 
+bool \hyperlink{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302}{retrieve\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n, const Key\+Type \&search\+\_\+key, Data\+Type \&search\+\_\+data\+\_\+item) const
+\item 
+int \hyperlink{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a}{get\+\_\+height\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n) const
+\item 
+int \hyperlink{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed}{get\+\_\+count\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n) const
+\item 
+void \hyperlink{class_b_s_tree_a7423df4da3dd2035e681a67c321ec719}{copy\+\_\+tree} (const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&other\+\_\+tree)
+\item 
+void \hyperlink{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72}{show\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n, int level) const
+\item 
+void \hyperlink{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6}{insert\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&n, const Data\+Type \&new\+\_\+data\+\_\+item)
+\item 
+void \hyperlink{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d}{copy\+\_\+tree\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&n, const \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$other\+\_\+pointer)
+\item 
+void \hyperlink{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb}{write\+\_\+keys\+\_\+helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$n) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$ \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e}{}\label{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e} 
+\index{B\+S\+Tree@{B\+S\+Tree}!B\+S\+Tree@{B\+S\+Tree}}
+\index{B\+S\+Tree@{B\+S\+Tree}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{B\+S\+Tree()}{BSTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+\hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::\hyperlink{class_b_s_tree}{B\+S\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00042 \{
+00043     \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root} = NULL;
+00044 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0}{}\label{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0} 
+\index{B\+S\+Tree@{B\+S\+Tree}!B\+S\+Tree@{B\+S\+Tree}}
+\index{B\+S\+Tree@{B\+S\+Tree}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{B\+S\+Tree()}{BSTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+\hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::\hyperlink{class_b_s_tree}{B\+S\+Tree} (\begin{DoxyParamCaption}\item[{const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00054 \{
+00055     \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root} = NULL;
+00056     \hyperlink{class_b_s_tree_a7423df4da3dd2035e681a67c321ec719}{copy\_tree}(source);
+00057 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c}{}\label{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c} 
+\index{B\+S\+Tree@{B\+S\+Tree}!````~B\+S\+Tree@{$\sim$\+B\+S\+Tree}}
+\index{````~B\+S\+Tree@{$\sim$\+B\+S\+Tree}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{$\sim$\+B\+S\+Tree()}{~BSTree()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+\hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::$\sim$\hyperlink{class_b_s_tree}{B\+S\+Tree} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00116 \{
+00117     \hyperlink{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{clear}();
+00118 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{}\label{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16} 
+\index{B\+S\+Tree@{B\+S\+Tree}!clear@{clear}}
+\index{clear@{clear}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00299 \{
+00300     \hyperlink{class_b_s_tree_a0c759512b61b88b824266d501beaf842}{clear\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root});
+00301     \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root} = 0;
+00302 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a0c759512b61b88b824266d501beaf842}{}\label{class_b_s_tree_a0c759512b61b88b824266d501beaf842} 
+\index{B\+S\+Tree@{B\+S\+Tree}!clear\+\_\+helper@{clear\+\_\+helper}}
+\index{clear\+\_\+helper@{clear\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{clear\+\_\+helper()}{clear\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::clear\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00312 \{
+00313     \textcolor{keywordflow}{if} (n != 0)
+00314     \{
+00315         \hyperlink{class_b_s_tree_a0c759512b61b88b824266d501beaf842}{clear\_helper}(n->left);
+00316         \hyperlink{class_b_s_tree_a0c759512b61b88b824266d501beaf842}{clear\_helper}(n->right);
+00317         \textcolor{keyword}{delete} n;
+00318     \}
+00319 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a7423df4da3dd2035e681a67c321ec719}{}\label{class_b_s_tree_a7423df4da3dd2035e681a67c321ec719} 
+\index{B\+S\+Tree@{B\+S\+Tree}!copy\+\_\+tree@{copy\+\_\+tree}}
+\index{copy\+\_\+tree@{copy\+\_\+tree}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{copy\+\_\+tree()}{copy\_tree()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::copy\+\_\+tree (\begin{DoxyParamCaption}\item[{const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&}]{other\+\_\+tree }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00088 \{
+00089     \hyperlink{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d}{copy\_tree\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}, source\_tree.root);
+00090 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d}{}\label{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d} 
+\index{B\+S\+Tree@{B\+S\+Tree}!copy\+\_\+tree\+\_\+helper@{copy\+\_\+tree\+\_\+helper}}
+\index{copy\+\_\+tree\+\_\+helper@{copy\+\_\+tree\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{copy\+\_\+tree\+\_\+helper()}{copy\_tree\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::copy\+\_\+tree\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&}]{n,  }\item[{const \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{other\+\_\+pointer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00100 \{
+00101     \textcolor{keywordflow}{if} (n != 0) \{
+00102         n = \textcolor{keyword}{new} BSTreeNode(source\_pointer->dataItem, 0, 0);
+00103         \hyperlink{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d}{copy\_tree\_helper}(n->left, source\_pointer->left);
+00104         \hyperlink{class_b_s_tree_a57b4fd45e3710cc24d63df9b80bae36d}{copy\_tree\_helper}(n->right, source\_pointer->right);
+00105     \}
+00106 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed}{}\label{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed} 
+\index{B\+S\+Tree@{B\+S\+Tree}!get\+\_\+count\+\_\+helper@{get\+\_\+count\+\_\+helper}}
+\index{get\+\_\+count\+\_\+helper@{get\+\_\+count\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{get\+\_\+count\+\_\+helper()}{get\_count\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+int \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::get\+\_\+count\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00436 \{
+00437     \textcolor{keywordflow}{if} (n == 0) 
+00438     \{
+00439         \textcolor{keywordflow}{return} 0;
+00440     \}
+00441 
+00442     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed}{get\_count\_helper}(n->left) + \hyperlink{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed}{get\_count\_helper}(n->right) + 1;
+00443 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a}{}\label{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a} 
+\index{B\+S\+Tree@{B\+S\+Tree}!get\+\_\+height\+\_\+helper@{get\+\_\+height\+\_\+helper}}
+\index{get\+\_\+height\+\_\+helper@{get\+\_\+height\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{get\+\_\+height\+\_\+helper()}{get\_height\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+int \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::get\+\_\+height\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00399 \{
+00400     \textcolor{keywordtype}{int} length\_of\_left, length\_of\_right, result;   
+00401 
+00402     \textcolor{keywordflow}{if} (n == 0)
+00403         result = 0;                    
+00404     \textcolor{keywordflow}{else}
+00405     \{
+00406         length\_of\_left = \hyperlink{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a}{get\_height\_helper}(n->left) + 1;    
+00407         length\_of\_right = \hyperlink{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a}{get\_height\_helper}(n->right) + 1;   
+00408         \textcolor{keywordflow}{if} (length\_of\_left >= length\_of\_right)                  
+00409             result = length\_of\_left;
+00410         \textcolor{keywordflow}{else}
+00411             result = length\_of\_right;
+00412     \}
+00413 
+00414     \textcolor{keywordflow}{return} result;
+00415 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a138977042d1d7cbaa363fbcf435a1e88}{}\label{class_b_s_tree_a138977042d1d7cbaa363fbcf435a1e88} 
+\index{B\+S\+Tree@{B\+S\+Tree}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{get\+Count()}{getCount()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+int \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00424 \{
+00425     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_a8b7d2aea1aef9e8abf213cfaaa9230ed}{get\_count\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root});
+00426 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a9e8f8c02f31a9ed55458b569dd809d62}{}\label{class_b_s_tree_a9e8f8c02f31a9ed55458b569dd809d62} 
+\index{B\+S\+Tree@{B\+S\+Tree}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{get\+Height()}{getHeight()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+int \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::get\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00387 \{
+00388     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_ad8a9303c63c71724cc1bba081edce42a}{get\_height\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root});
+00389 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a3136c063de9adf6f55e524ad099df62f}{}\label{class_b_s_tree_a3136c063de9adf6f55e524ad099df62f} 
+\index{B\+S\+Tree@{B\+S\+Tree}!insert@{insert}}
+\index{insert@{insert}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::insert (\begin{DoxyParamCaption}\item[{const Data\+Type \&}]{new\+\_\+data\+\_\+item }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00128 \{
+00129     \hyperlink{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6}{insert\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}, new\_data\_item);
+00130 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{class_b_s_tree_a3136c063de9adf6f55e524ad099df62f_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6}{}\label{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6} 
+\index{B\+S\+Tree@{B\+S\+Tree}!insert\+\_\+helper@{insert\+\_\+helper}}
+\index{insert\+\_\+helper@{insert\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{insert\+\_\+helper()}{insert\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::insert\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&}]{n,  }\item[{const Data\+Type \&}]{new\+\_\+data\+\_\+item }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00141 \{
+00142     \textcolor{keywordflow}{if} (n == 0) \textcolor{comment}{// Insert}
+00143         n = \textcolor{keyword}{new} BSTreeNode(new\_data\_item, 0, 0);
+00144     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (new\_data\_item.getKey() < n->dataItem.getKey())
+00145         \hyperlink{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6}{insert\_helper}(n->left, new\_data\_item);
+00146     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (new\_data\_item.getKey() > n->dataItem.getKey())
+00147         \hyperlink{class_b_s_tree_a79d1cab6032e8be7484591990249c9d6}{insert\_helper}(n->right, new\_data\_item);
+00148     \textcolor{keywordflow}{else}
+00149         n->dataItem = new\_data\_item;
+00150 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_aa79c2c24f8a4068dd01526674016b861}{}\label{class_b_s_tree_aa79c2c24f8a4068dd01526674016b861} 
+\index{B\+S\+Tree@{B\+S\+Tree}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{is\+Empty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+bool \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00329 \{
+00330     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root} == 0;
+00331 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448}{}\label{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448} 
+\index{B\+S\+Tree@{B\+S\+Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+\hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \& \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$ \&}]{other }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00067 \{
+00068     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != &source\_tree)
+00069     \{
+00070         \hyperlink{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{clear}();
+00071         \hyperlink{class_b_s_tree_a7423df4da3dd2035e681a67c321ec719}{copy\_tree}(source\_tree);
+00072         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+00073     \}
+00074     \textcolor{keywordflow}{else}
+00075     \{
+00076         \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+00077     \}
+00078 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a7750c081fd047304b6ded5f2df65b3f3}{}\label{class_b_s_tree_a7750c081fd047304b6ded5f2df65b3f3} 
+\index{B\+S\+Tree@{B\+S\+Tree}!remove@{remove}}
+\index{remove@{remove}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+bool \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::remove (\begin{DoxyParamCaption}\item[{const Key\+Type \&}]{delete\+\_\+key }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}
+00207 \{
+00208     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{remove\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}, delete\_key);
+00209 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{}\label{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577} 
+\index{B\+S\+Tree@{B\+S\+Tree}!remove\+\_\+helper@{remove\+\_\+helper}}
+\index{remove\+\_\+helper@{remove\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{remove\+\_\+helper()}{remove\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+bool \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::remove\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$\&}]{n,  }\item[{const Key\+Type \&}]{delete\+\_\+key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00220 \{
+00221     BSTreeNode* delete\_pointer; 
+00222     \textcolor{keywordtype}{int} result;                 
+00223 
+00224     \textcolor{keywordflow}{if} (n == 0)
+00225         result = \textcolor{keyword}{false};                           
+00226     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (delete\_key < n->dataItem.getKey())
+00227         result = \hyperlink{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{remove\_helper}(n->left, delete\_key);
+00228     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (delete\_key > n->dataItem.getKey())
+00229         result = \hyperlink{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{remove\_helper}(n->right, delete\_key);
+00230     \textcolor{keywordflow}{else}
+00231     \{                                            
+00232         delete\_pointer = n;
+00233         \textcolor{keywordflow}{if} (n->left == 0)
+00234         \{
+00235             n = n->right;                    
+00236             \textcolor{keyword}{delete} delete\_pointer;
+00237         \}
+00238         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n->right == 0)
+00239         \{
+00240             n = n->left;                     
+00241             \textcolor{keyword}{delete} delete\_pointer;
+00242         \}
+00243         \textcolor{keywordflow}{else}
+00244             
+00245         \{
+00246             BSTreeNode* temp = n->left;
+00247             \textcolor{keywordflow}{while} (temp->right) 
+00248             \{
+00249                 temp = temp->right;
+00250             \}
+00251             n->dataItem = temp->dataItem;
+00252             \hyperlink{class_b_s_tree_a4bd9d8e6357091ea72da7f62e2ee9577}{remove\_helper}(n->left, temp->dataItem.getKey());
+00253 
+00254         \}
+00255         result = \textcolor{keyword}{true};
+00256     \}
+00257 
+00258     \textcolor{keywordflow}{return} result;
+00259 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a464aa205470b150038ff35dfa01d89b8}{}\label{class_b_s_tree_a464aa205470b150038ff35dfa01d89b8} 
+\index{B\+S\+Tree@{B\+S\+Tree}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{retrieve()}{retrieve()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+bool \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::retrieve (\begin{DoxyParamCaption}\item[{const Key\+Type \&}]{search\+\_\+key,  }\item[{Data\+Type \&}]{search\+\_\+data\+\_\+item }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00161 \{
+00162     \textcolor{keywordflow}{return} \hyperlink{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302}{retrieve\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}, search\_key, search\_data\_item);
+00163 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_b_s_tree_a464aa205470b150038ff35dfa01d89b8_icgraph}
+\end{center}
+\end{figure}
+\hypertarget{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302}{}\label{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302} 
+\index{B\+S\+Tree@{B\+S\+Tree}!retrieve\+\_\+helper@{retrieve\+\_\+helper}}
+\index{retrieve\+\_\+helper@{retrieve\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{retrieve\+\_\+helper()}{retrieve\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+bool \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::retrieve\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n,  }\item[{const Key\+Type \&}]{search\+\_\+key,  }\item[{Data\+Type \&}]{search\+\_\+data\+\_\+item }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00175 \{
+00176     \textcolor{keywordtype}{bool} result;
+00177 
+00178     \textcolor{keywordflow}{if} (n == 0)
+00179     \{
+00180         result = \textcolor{keyword}{false};
+00181     \}
+00182     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (search\_key < n->dataItem.getKey())
+00183     \{
+00184         result = \hyperlink{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302}{retrieve\_helper}(n->left, search\_key, search\_data\_item);
+00185     \}
+00186     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (search\_key > n->dataItem.getKey())
+00187     \{
+00188         result = \hyperlink{class_b_s_tree_ae8721d0a76719bc95e6b48420b5be302}{retrieve\_helper}(n->right, search\_key, search\_data\_item);
+00189     \}
+00190     \textcolor{keywordflow}{else}
+00191     \{
+00192         search\_data\_item = n->dataItem;
+00193         result = \textcolor{keyword}{true};
+00194     \}
+00195 
+00196     \textcolor{keywordflow}{return} result;
+00197 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72}{}\label{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72} 
+\index{B\+S\+Tree@{B\+S\+Tree}!show\+\_\+helper@{show\+\_\+helper}}
+\index{show\+\_\+helper@{show\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{show\+\_\+helper()}{show\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::show\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n,  }\item[{int}]{level }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00360 \{
+00361     \textcolor{keywordflow}{if} (n != 0)
+00362     \{
+00363         \hyperlink{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72}{show\_helper}(n->right, level + 1);         
+00364         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < level; i++)    
+00365             cout << \textcolor{stringliteral}{"\(\backslash\)t"};
+00366         cout << \textcolor{stringliteral}{" "} << n->dataItem.getKey();   
+00367         \textcolor{keywordflow}{if} ((n->left != 0) &&          
+00368             (n->right != 0))
+00369             cout << \textcolor{stringliteral}{"<"};
+00370         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n->right != 0)
+00371             cout << \textcolor{stringliteral}{"/"};
+00372         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n->left != 0)
+00373             cout << \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)"};
+00374         cout << endl;
+00375         \hyperlink{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72}{show\_helper}(n->left, level + 1);          
+00376     \}
+00377 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a66690333188606d533e4ad182922d9e1}{}\label{class_b_s_tree_a66690333188606d533e4ad182922d9e1} 
+\index{B\+S\+Tree@{B\+S\+Tree}!show\+Structure@{show\+Structure}}
+\index{show\+Structure@{show\+Structure}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{show\+Structure()}{showStructure()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::show\+Structure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00341 \{
+00342     \textcolor{keywordflow}{if} (\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root} == 0)
+00343         cout << \textcolor{stringliteral}{"Tree is empty."} << endl;
+00344     \textcolor{keywordflow}{else}
+00345     \{
+00346         cout << endl;
+00347         \hyperlink{class_b_s_tree_a735864f670b952c5bb2bc2550ade3a72}{show\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}, 1);
+00348         cout << endl;
+00349     \}
+00350 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb}{}\label{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb} 
+\index{B\+S\+Tree@{B\+S\+Tree}!write\+\_\+keys\+\_\+helper@{write\+\_\+keys\+\_\+helper}}
+\index{write\+\_\+keys\+\_\+helper@{write\+\_\+keys\+\_\+helper}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{write\+\_\+keys\+\_\+helper()}{write\_keys\_helper()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::write\+\_\+keys\+\_\+helper (\begin{DoxyParamCaption}\item[{\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node} $\ast$}]{n }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyCode}
+00282 \{
+00283     \textcolor{keywordflow}{if} (n != 0)
+00284     \{
+00285         \hyperlink{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb}{write\_keys\_helper}(n->left);
+00286         cout << n->dataItem.getKey() << \textcolor{stringliteral}{" "};
+00287         \hyperlink{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb}{write\_keys\_helper}(n->right);
+00288     \}
+00289 \}
+\end{DoxyCode}
+\hypertarget{class_b_s_tree_a0f0b3362a2b927092a464cb37edf59b3}{}\label{class_b_s_tree_a0f0b3362a2b927092a464cb37edf59b3} 
+\index{B\+S\+Tree@{B\+S\+Tree}!write\+Keys@{write\+Keys}}
+\index{write\+Keys@{write\+Keys}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{write\+Keys()}{writeKeys()}}
+{\footnotesize\ttfamily template$<$typename Data\+Type , typename Key\+Type $>$ \\
+void \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::write\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+\begin{DoxyCode}
+00269 \{
+00270     \hyperlink{class_b_s_tree_af3a79c41f7799cf123438f9449cf3ebb}{write\_keys\_helper}(\hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root});
+00271     cout << endl;
+00272 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_b_s_tree_a0f0b3362a2b927092a464cb37edf59b3_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{}\label{class_b_s_tree_a83534afce9094181ac031f9f596a8625} 
+\index{B\+S\+Tree@{B\+S\+Tree}!root@{root}}
+\index{root@{root}!B\+S\+Tree@{B\+S\+Tree}}
+\subsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily template$<$typename Data\+Type, class Key\+Type$>$ \\
+\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\+S\+Tree\+Node}$\ast$ \hyperlink{class_b_s_tree}{B\+S\+Tree}$<$ Data\+Type, Key\+Type $>$\+::root\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_b_s_tree_8h}{B\+S\+Tree.\+h}\item 
+\hyperlink{_b_s_tree_8cpp}{B\+S\+Tree.\+cpp}\end{DoxyCompactItemize}
