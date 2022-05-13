@@ -1,0 +1,45 @@
+Bowlers (country)              Round 1         Round 2         Round 3         Averages       
+---------------------------------------------------------------------------------------
+J. Brown (USA)                 151             194             260             201.67         
+R. McDonald (USA)              192             268             260             240.00         
+S. Riley (USA)                 227             188             245             220.00         
+D. Smith (USA)                 173             299             206             226.00         
+T. Thomas (USA)                242             287             296             275.00         
+A. Ali (India)                 275             248             211             244.67         
+L. Ghandi (India)              275             157             156             196.00         
+S. Gupta (India)               269             298             172             246.33         
+L. Patel (India)               288             168             258             238.00         
+J. Perry (India)               277             198             202             225.67         
+J. Johnson (Canada)            243             245             265             251.00         
+A. Polivierre (Canada)         161             179             225             188.33         
+K. Roy (Canada)                210             199             211             206.67         
+D. Lemieux (Canada)            215             169             208             197.33         
+I. Shanahan (Canada)           211             188             262             220.33         
+
+Scores for Round 1
+USA: 985
+India: 1384
+Canada: 1040
+Winner: India
+
+Scores for Round 2
+USA: 1236
+India: 1069
+Canada: 980
+Winner: USA
+
+Scores for Round 3
+USA: 1267
+India: 999
+Canada: 1171
+Winner: USA
+
+Final Scores
+USA: 3488
+India: 3452
+Canada: 3191
+Winner: USA
+
+Gold: T. Thomas (USA)
+Silver: J. Johnson (Canada)
+Bronze: S. Gupta (India)

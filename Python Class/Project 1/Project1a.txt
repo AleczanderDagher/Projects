@@ -1,0 +1,7 @@
+1-8-2021:Wayne State:87:Lake Superior State:76
+1-9-2021:Wayne State:64:Lake Superior State:75
+1-15-2021:Wayne State:86:Davenport:68
+1-16-2021:Wayne State:88:Davenport:75
+1-22-2021:Wayne State:67:Northwood:74
+1-23-2021:Wayne State:66:Northwood:67
+1-26-2021:Wayne State:58:Ashland:50
