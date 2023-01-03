@@ -1,3 +1,22 @@
+# Please create a Python program based on the game of WAR. The rules of the game are 
+# as follows:
+# The game of WAR is rather simple as it requires  only the ability to recognize 
+# which of two cards has a higher value.
+# In this game the value of cards from lowest to highest is:
+# 2,3,4,5,6,7,8,9,10,J,Q,K,A
+# No suit has a higher value than another.
+# Both players take the top card off of their pile (stack) and place it face up in the 
+# playing area. The player that played the higher card wins the round and takes 
+# both cards. 
+# If there is a tie, then both players place the next card down and the 3rd  card up. 
+# The winner of the 3rd card wins the round. If the 3rd cards tie, then both players 
+# repeat the process until a player has won the hand. 
+# When the player runs out of cards, then the player will shuffle the cards from the 
+# winning pile (stack). The game will continue until one play player is completely 
+# out cards.
+# This program must be in a graphical format. 
+
+
 from random import shuffle
 from distutils import config
 from http.cookiejar import DefaultCookiePolicy
