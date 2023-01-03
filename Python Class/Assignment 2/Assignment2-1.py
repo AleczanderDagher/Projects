@@ -1,5 +1,20 @@
 import constant
 
+# Please create a Python program that calculate the take home pay for an individual. The program 
+# must ask the user’s First name and for hours worked during the week, the hourly rate of pay. The 
+# program must also ask for overtime hours to be calculated at 1.5 time regular pay. Calculate the 
+# gross weekly pay and figure in the following taxes: 
+# a. FICA = 6.2%
+# b. Medicare Tax = 1.45%
+# c. State Tax = 4.25%
+# d. Federal Tax = 24%
+# e. City Tax = 0.9%
+# f. Park Tax = 0.6%
+# Print out the totals at the bottom of the program along with what the total home pay would be for 
+# the user. 
+# Must use constants and comments within your code * 
+
+
 # Enter first name, hours worked during week, and hourly pay
 firstName = input("Enter your first name: ")
 hoursWorked = float(input("Enter hours worked during the week: "))
