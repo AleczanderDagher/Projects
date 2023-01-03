@@ -1,3 +1,15 @@
+# Please create a python program that ask a bowling team captain to enter scores from their latest 
+# tournament between the USA, Canada and India. There are 5 bowlers from each team and you must 
+# provide them names. The scores must be between 0 and 300 for each bowler. There are 3 rounds 
+# and each bowler must have a score for each game
+# a. You will add up the scores for each team and determine the winning team for each round.
+# b. You will compute the average scores for each team along with each bowler.
+# c. You will determine which team is the overall winner by using the combined scores of each 
+# round.
+# d. You will determine the top 3 bowlers by their individual averages and provide them with a 
+# Gold (1st place), Silver (2nd place) or a Bronze (3rd place) Olympic medal.
+
+
 # List of scores for each round
 teamScoresR1 = []
 teamScoresR2 = []
