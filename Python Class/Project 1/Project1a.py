@@ -1,3 +1,12 @@
+# Please create a Python program that reads in the attached text file (hw4.txt) and creates the 
+# following output: (30 points)
+# a. Win – Loss record for the season to date
+# b. Average score Wayne State and opponents (i.e., WSU 69, others 65)
+# c. Average winning margin
+# d. Average losing margin
+# e. Biggest win
+# f. Worst defeat
+
 file = open("Project1a.txt", "r")
 list_of_lists = [(line.strip()).split(':') for line in file]
 file.close()
