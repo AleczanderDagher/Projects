@@ -1,3 +1,20 @@
+# Please create a Python program that prints out a bill for a cable TV subscriber. The clerk will 
+# input the following: (20 points)
+# a. First and last name
+# b. type of service (basic $50 or premium $90).
+# c. If premium, how many pay-per-view channels ($9.99 for each).
+# d. taxes on basic service = $6.50 and $9.25 on premium. (only on part a (one time 
+# charge))
+# e. Is there a past balance? If so, how much do they owe and add 10% on the balance 
+# owed.
+# f. Print out totals that the owner must pay at the bottom. Use your discretion what a 
+# bill would look like. 
+# Output examples: (please use print out the bill in a professional format) 
+# Output:  
+#    basic = $50.00 + $6.25 = $56.25
+#   premium + one extra channel = $90 + 9.99  + 9.25 (taxes) + 100 (existing balance + 10 = 
+# $110)  = $214.24 total balance due
+
 PAY_PER_VIEW = 9.99
 BASIC_SERVICE_TAX = 6.50
 PREMIUM_SERVICE_TAX = 9.25
