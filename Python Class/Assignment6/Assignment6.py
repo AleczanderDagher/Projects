@@ -1,3 +1,34 @@
+# Please create a Python that will generate a class of automobiles. The class will consist of:
+# a. Type (electric, gas or diesel)
+# b. Make
+# c. Model
+# d. Year
+# e. Cost of vehicle
+# f. MPG or KWh (miles per gallon or Kilo Watts per hour)
+# g. Tank size (total gallons of fuel or Battery size in KWs)
+# You will need to have 3 vehicles that are constant.  Meaning, select your favorite 3 
+# vehicles (1 per type). You will then ask the user for information about 3 additional 
+# vehicles (1 per type). You then ask the user to supply a trip for their destination. Please 
+# ask for the city along with the round-trip milage from Detroit. 
+# Reference for costs:
+#  $5.15 per gallon of diesel
+#  $4.39 per gallon of gas
+#  $0.14 per KW
+# You will then need to formulate how to print the details of vehicles and sort all 6 sorted 
+# most expensive to cheapest. You will then calculate the costs of each vehicle and display 
+# the total costs. Please use one of the following printing libraries to make it look 
+# professional. 
+#  Pprint
+# o https://pythongeeks.org/python-pprint-module/ 
+#  Panda 
+# o https://www.pythoncentral.io/how-to-install-pandas-in-python/
+# o https://www.delftstack.com/howto/python/data-in-table-format-
+# python/
+#  Or another library of your choosing. You could also do a graphing solution. 
+# See references:
+# o https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
+
+
 from pprint import pprint
 
 # Constants of prices of gas, diesel and electric
