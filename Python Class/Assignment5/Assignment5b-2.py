@@ -1,3 +1,13 @@
+# Please create a python program that will modify one of our previous assignments into a 
+# gui-based program using either tkinter or breezypythongui. Please create a Python 
+# program that loop through from 147 to 62 by -3 during each iteration. Also, print out the total 
+# number of times that the program looped along with the ending number. 
+# a. Differences:
+# i. Allow user to enter starting number between 200 and 135.
+# ii. Allow user to enter ending number between 95 and 62
+# iii. Allow user to enter increment value between 2 and 5.
+
+
 import math
 import time
 from tkinter import *
