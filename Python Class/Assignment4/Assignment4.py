@@ -1,3 +1,26 @@
+# This is redo of a previous with the following exceptions:
+# 1) You must create a file with all 15 names including their respective team (5 for each team).  This 
+# can be done inside or outside of the program. 
+# 2) The scores are going to be random between 150 and 300. Must be done with a function within 
+# the program. 
+# 3) You must create at least 3 user generated functions for this project.
+# 4) You will write the scores out to the file called completed that has each member’s team, name of 
+# bowler and scores for each round.
+# 5) You will printout the same as listed below to the screen and the text file. 
+# 1. Please create a python program that ask a bowling team captain to enter scores from their latest 
+# tournament between the USA, Canada and India. There are 5 bowlers from each team and you must 
+# provide them names. There are 3 rounds and each bowler must have a score for each game
+# a. You will add up the scores for each team and determine the winning team for each round.
+# b. You will compute the average scores for each team along with each bowler.
+# c. You will determine which team is the overall winner by using the combined scores of each 
+# round.
+# d. You will determine the top 3 bowlers by their individual averages and provide them with a 
+# Gold (1st place), Silver (2nd place) or a Bronze (3rd place) Olympic medal.
+# Printout requirements:
+# You will display each of the above accomplishments along with the original scores of each 
+# bowler and the team totals for each round. 
+
+
 import random
 file2 = open("Scoreboard.txt", "w")
 def printAllScores(bowlers, R1Scores, R2Scores, R3Scores, averages):
