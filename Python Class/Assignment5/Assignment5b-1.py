@@ -1,3 +1,20 @@
+# Please create a Python currency conversation program using breezyPythonGui or 
+# tkinter. The program will allow the user to select from a list of 5 separate international 
+# currencies and have the output converted to dollars. You will also need a textbox that 
+# allows the user to input an amount and have the program return the exact amount 
+# (including cents i.e. $59.62). 
+# The program will also need to allow the user to have the output go to a file called 
+# currencyConversion.txt. 
+# Note: no json or requests modules are allowed
+# Possible currencies: (you can figure out the actual exchange rate)
+# Egyptian - Pound
+# Europe - Euro 
+# South Korean - Won
+# Russian - Ruble
+# India – Rupee
+# (or a denomination of your choice)
+
+
 import math
 from tkinter import *
 
